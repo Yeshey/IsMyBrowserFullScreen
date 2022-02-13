@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullScreen?</title>
+</head>
+<body>
+    <div class="answer"></div>
+</body>
+<style>
+    .answer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 90vh;
+        width: 90vw;
+
+        display:grid;
+        place-items: center;
+
+        font-size: min(80vh,40vw);
+        font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<script>
+    function updt() {
+        if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)){
+            str = "YES"
+        } else {
+            str = "NO"
+        }
+        document.querySelector(".answer").innerHTML=str
+    }
+    window.addEventListener("resize", () => {
+        updt()
+    });
+    updt()
+</script>
+</html>
+
+<!--This page working fully on a link:
+data:text/html,<title>FullScreen?</title><body><div class="answer"></div></body><style>.answer{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);height: 90vh;width: 90vw;display:grid;place-items: center;font-size: min(80vh,40vw);font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;}</style><script>function updt() { if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {str = "YES"} else {str = "NO"} document.querySelector(".answer").innerHTML=str } window.addEventListener("resize", () => { updt() }); updt()</script>
+-->
