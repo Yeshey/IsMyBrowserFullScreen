@@ -1,7 +1,7 @@
 # IsMyBrowserFullScreen
 Web Page that answers the question in the repository name
 
-# <a href="https://yeshey.github.io/IsMyBrowserFullScreen/isFullScreen.html" target="_blank">Try The site</a>
+# [Try The site](https://yeshey.github.io/IsMyBrowserFullScreen/isFullScreen.html)
 
 [//]: # (comment: can't seem to put a data:text/html in a markdown link, but here is the link in that state:)
 <!-- 
