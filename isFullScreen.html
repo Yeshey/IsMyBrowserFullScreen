@@ -31,7 +31,7 @@
 </style>
 <script>
     function updt() {
-        if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)){
+        if(!window.screenTop && !window.screenY){
             str = "YES"
         } else {
             str = "NO"
